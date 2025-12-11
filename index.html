@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scramjet Proxy</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Top HUD / Address Bar -->
+  <div id="hud">
+    <button onclick="goBack()>Back</button>
+    <button onclick="goForward()">Forward</button>
+    <button onclick="location.reload()">Reload</button>
+    <input type="text" id="url-input" placeholder="https://example.com"/>
+    <button onclick="go()">Go</button>
+  </div>
+
+  <!-- Menu -->
+  <nav id="menu">
+    <h2>My Proxy</h2>
+    <a href="#" onclick="load('https://google.com')">Google</a>
+    <a href="#" onclick="load('https://youtube.com')">YouTube</a>
+    <a href="#" onclick="load('https://discord.com')">Discord</a>
+    <a href="#" onclick="load('https://reddit.com')">Reddit</a>
+    <a href="#" onclick="load('https://now.gg')">Games (now.gg)</a>
+  </nav>
+
+  <!-- Proxied content will appear here -->
+  <iframe id="proxy-frame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"></iframe>
+
+  <script src="https://cdn.jsdelivr.net/gh/MercuryWorkshop/scramjet@v1.2.2/dist/scramjet.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
